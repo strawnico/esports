@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assets/bg.png);
     background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -23,12 +23,12 @@ body * {
     border-radius: 50%;
     width: 120px;
     height: 120px;
-
+    object-fit: cover;
     margin: auto;
 }
    
 header div {
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    background-image: linear-gradient(90deg, #D848CF 0%, #992D95 40%, #367AB9 110%);
     border-radius: 50%;
 
     width: 128px;
@@ -67,7 +67,7 @@ main {
 
 section {
     color: #ffffff;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    background-image: linear-gradient(90deg, #D848CF 0%, #992D95 40%, #367AB9 110%);
     padding-top: 4px;
     border-radius: 10px;
 }
@@ -100,6 +100,8 @@ section ul {
 .games-list img {
     border-radius: 8px;
     width: 90px;
+    height: 120px;
+    object-fit: cover;
 }
 
 .channel-list img {
@@ -140,6 +142,31 @@ main section:nth-child(2) {
 main section:nth-child(3) {
     animation-delay: .8s;
 }
+
+.modal {
+    display: none; /* Oculte o modal por padrão */
+    position: fixed; /* Posicionamento fixo para cobrir a tela */
+    z-index: 1; /* Coloque-o acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Adicione rolagem, se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura com transparência */
+  }
+
+  /* Estilize o conteúdo do modal */
+  .modal-content {
+    background-color: #000000;
+    margin: 15% auto; /* Centralize verticalmente na página */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    cursor: pointer;
+  }
 
 @keyframes fromTop {
     from {
